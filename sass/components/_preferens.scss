@@ -1,18 +1,23 @@
 .preferens {
-    padding-top: 94px;
-    background-color: $background-section;
+     background-color: $background-section;
   
   &__list {
     display: flex;
-    justify-content: space-between;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: -15px;
+       
   }
   
   &__unit {
-    width: calc((100% - 90px) / 4);
-  }
-  
-  &__unit:not(:last-child) {
-      margin-right: 30px;
+    display: block;
+    margin: 15px;
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - 4*15px) / 2);
+      }
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 8*15px) / 4);
+       } 
   }
   
   &__text {

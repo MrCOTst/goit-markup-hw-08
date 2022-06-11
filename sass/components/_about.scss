@@ -1,9 +1,14 @@
 .about {
     background-color: $background-section;
+    @media screen and (max-width: $desktop) {
+      display: none;}
        
   &__list {
+    
+    @media screen and (min-width: $desktop) {
     display: flex;
     justify-content: space-between;
+    }
   }
   
   &__unit {
