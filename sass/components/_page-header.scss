@@ -16,7 +16,12 @@
     
     }
   }
-
+.page-header__conteiner .menu-toggle {
+  position: absolute;
+    top: 10px;
+    right: 16px;
+    color: #212121;
+}
 
   .nav  {
     @media screen and (max-width: $tablet) {
@@ -120,108 +125,4 @@
       margin-right: 50px;
   }
 }
-
-.menu-toggle {
-  min-height: 40px;
-  min-width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  outline: none;
-
-@media screen and (min-width: $tablet) {
-  display: none;
-}}
-
-.menu-toggle:hover,
-.menu-toggle:focus {
-  fill: $hover-color;
-}
-
-.menu-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  padding: 48px 40px;
-  background-color: $background-section;
-  z-index: 999;
-
-  transform: translateX(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.menu-container.is-open {
-  transform: translateX(0);
-}
-
-.menu-container .menu-toggle {
-  position: absolute;
-  top: 10px;
-  right: 16px;
-  color: #212121;
-    
-}
-  .mobile-nav {    
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 1.175;
-    letter-spacing: 0.02em;
  
-    &__link {
-  display: block;
-  padding: 16px 0;
-  color:  $mobail-menu-text;
-  text-decoration: none;
-    }
-    &__link--current {
-      color: $hover-color;
-    }
-  }
-  .mobile-contact__tel {
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 1.176;
-    letter-spacing: 0.02em;
-    color: $hover-color;
-    display: block;
-    padding: 16px 0;
-  }
-
-  .mobile-contact__mail {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1.167;
-    letter-spacing: 0.02em;
-    color: $secondary-text;
-    display: block;
-    padding: 16px 0;
-    margin-bottom: auto;
-  }
-
-  .mobile-social {
-    display: flex;
-    margin: 0;
-    margin-left: 93px;
-    padding: 0;
-  }
-  .mobile-social__link {
-    font-size: 18px;
-    line-height: 1.22;
-    letter-spacing: 0.02em;
-    color: $hover-color;
-    
-    padding: 10px;
-
-  }
-
-  .mobile-social li + li {
-    border-left-color: $border-modal-input;
-    border-left: 1px solid;
-  }

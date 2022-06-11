@@ -3,28 +3,50 @@
   
   &__conteiner {
     display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 60px 0;
+
       
   }
   &__contakts {
-    padding: 60px 0;
-    margin-bottom: 0;
-    margin-right: 70px;
+      margin-bottom: 0;
+
+    @media screen and (max-width: $tablet) {
+      margin-right: 124px;
+      margin-left: 124px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-right: 70px;
+    }
+
     }
 
   &__subtitle {
     color: $text-on-a-dark-background;
     margin-bottom: 20px;
+
+    @media screen and (max-width: $tablet) {
+      text-align: center;
+    }
     }
 
   &__join {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+
+    @media screen and (min-width: $desktop) {
     padding-top: 72px;
     margin-right: 93px;
     }
   }
+}
   
   .address {
     text-decoration: none;
     font-style: normal;
+    text-align: center;
   
   &__unit:not(:last-child) {
     margin-bottom: 9px;
@@ -50,17 +72,40 @@
 }
       
   .form {
-    padding-top: 72px;
-  
+    @media screen and (max-width: $tablet) {
+      margin-top: 60px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      padding-top: 72px;
+    }
+
+     
   &__subscription {
     display: flex;
-  }
+
+    @media screen and (max-width: $tablet) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+
+    @media screen and (min-width: $desktop) {
+      
+    }
+      }
   
   &__input {
     display: block;
     width: 358px;
     height: 50px;
     padding: 15px 16px;
+
+    @media screen and (max-width: $tablet) {
+      width: 450px;
+      margin: 0;
+    }
+
     margin-right: 12px;
     border-radius: 4px;
     border: 1px solid;
@@ -84,5 +129,11 @@
   &__icon {
     margin-left: 10px;
     fill: $text-on-a-dark-background;
+  }
+  &__button {
+    @media screen and (max-width: $tablet) {
+      margin-top: 20px;
+      text-align: center;
+      }
   }
 }
