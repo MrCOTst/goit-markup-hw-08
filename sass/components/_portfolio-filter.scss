@@ -1,0 +1,38 @@
+.portfolio__conteiner {
+    margin-bottom: 50px;
+  }
+ 
+  .filter {
+    display: flex;
+    justify-content: center;
+ 
+  &__unit + &__unit {
+   margin-left: 8px;
+ }
+  
+ &__btn {
+   text-align: center;
+   padding: 6px 22px;
+ 
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 1.62;
+     
+   background-color: $background-passiv-btn-portfolio;
+   border: 1px solid transparent;
+   border-radius: 4px;
+ 
+   cursor: pointer;
+   
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+   color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+   filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+ 
+ &__btn:hover,
+ &__btn:focus {
+   background-color: $hover-color;
+   color: $text-on-a-dark-background;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ }
+}

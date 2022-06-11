@@ -1,0 +1,27 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    max-width: 1600px;
+    margin-left:auto;
+    margin-right: auto;
+    text-align: center;
+    background-image: linear-gradient(
+      to right,
+      $background-hero,
+      $background-hero),
+    url(../../imeges/main.jpg);
+   
+    
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $text-on-a-dark-background;
+    }
+  }

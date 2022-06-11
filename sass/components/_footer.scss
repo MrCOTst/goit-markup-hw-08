@@ -1,0 +1,88 @@
+.footer {
+    background: $background-footer;
+  
+  &__conteiner {
+    display: flex;
+      
+  }
+  &__contakts {
+    padding: 60px 0;
+    margin-bottom: 0;
+    margin-right: 70px;
+    }
+
+  &__subtitle {
+    color: $text-on-a-dark-background;
+    margin-bottom: 20px;
+    }
+
+  &__join {
+    padding-top: 72px;
+    margin-right: 93px;
+    }
+  }
+  
+  .address {
+    text-decoration: none;
+    font-style: normal;
+  
+  &__unit:not(:last-child) {
+    margin-bottom: 9px;
+    }
+  
+  &__link {
+    display: block;
+    font-size: 14px;
+    line-height: 1.71;
+    color: $secondary-text-footer;
+  
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  &__link--color {
+    color: $text-on-a-dark-background;
+  
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $hover-color;
+  }
+}
+      
+  .form {
+    padding-top: 72px;
+  
+  &__subscription {
+    display: flex;
+  }
+  
+  &__input {
+    display: block;
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px;
+    margin-right: 12px;
+    border-radius: 4px;
+    border: 1px solid;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: transparent;
+    color: $secondary-text-footer;
+    }
+  
+  &__input::placeholder {
+    color: $secondary-text-footer;
+    }
+  
+  &__input:placeholder-shown {
+    border-color: $text-footer-placeholder;
+    }
+  
+  &__input:not(:placeholder-shown) {
+    border-color: $hover-color;
+    }
+
+  &__icon {
+    margin-left: 10px;
+    fill: $text-on-a-dark-background;
+  }
+}

@@ -1,0 +1,16 @@
+.logo {
+    display: block;
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.48;
+    color: $color-logo;
+  
+  &__footer {
+    margin-bottom: 20px;
+    color: $color-logo-footer;
+  }
+  &__accent {
+    color: $color-logo-accent;
+  }
+}
