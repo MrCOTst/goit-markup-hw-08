@@ -1,14 +1,38 @@
 .portfolio__conteiner {
+  @media screen and (max-width: $tablet-only) {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $tablet-only) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
     margin-bottom: 50px;
+  }
+    
   }
  
   .filter {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+      align-content: flex-start;
+      column-gap: 8px;
+      row-gap: 15px;
+    
+    
+    // @media screen and (max-width: $mobile-only) {
+      
+    // }
+    @media screen and (min-width: $tablet) {
+      justify-content: center;
+      // &__unit + &__unit {
+      //   margin-left: 8px;
+      // }
+    }
+
  
-  &__unit + &__unit {
-   margin-left: 8px;
- }
+  
   
  &__btn {
    text-align: center;

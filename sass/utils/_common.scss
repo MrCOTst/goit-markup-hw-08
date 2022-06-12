@@ -19,8 +19,13 @@
     font-family: $main-font;
     color: #212121;
     letter-spacing: 0.03em;
-    /* padding-top: 80px; */
-   
+    @media screen and (max-width: $mobile-only) {
+      padding-top: 60px;
+    }
+    @media screen and (min-width: $tablet) {
+      padding-top: 80px;
+    }
+     
   }
   
   img {
