@@ -24,13 +24,19 @@
 }
 
   .nav  {
-    @media screen and (max-width: $tablet) {
+    @media screen and (max-width: $mobile-only) {
       display: none;
     }
     display: flex;
     margin: 0;
-    margin-left: 93px;
     padding: 0;
+
+
+    margin-left: 93px;
+    @media screen and (min-width: $tablet) and (max-width: $tablet-only) {
+      margin-left: 88px;
+      margin-right: 84px;
+    }
   
   &__item:not(:last-child) {
     margin-right: 50px; }
@@ -79,14 +85,21 @@
 }
 
   .header-contact {
-    @media screen and (max-width: $tablet) {
+    margin: 0;
+    margin-left: auto;
+    
+    @media screen and (max-width: $mobile-only) {
       display: none;
     }
     display: flex;
-    margin: 0;
-    margin-left: auto;
-    /* padding-top: 32px; */
-    /* padding-bottom: 32px; */
+    @media screen and (min-width: $tablet) and (max-width: $tablet-only) {
+      flex-wrap: wrap;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      
+    }
+    
+    
     
   &__link {
     display: flex;
@@ -96,8 +109,16 @@
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: $secondary-text;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    @media screen and (min-width: $tablet) and (max-width: $tablet-only) {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+    
   
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
       

@@ -2,20 +2,28 @@
     background: $background-footer;
   
   &__conteiner {
-    display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: flex;
       padding: 60px 0;
 
-      
-  }
+      @media screen and (max-width: $tablet-only) {
+      flex-wrap: wrap;
+      justify-content: center;
+      }
+      }
+
   &__contakts {
       margin-bottom: 0;
 
-    @media screen and (max-width: $tablet) {
-      margin-right: 124px;
-      margin-left: 124px;
+    @media screen and (max-width: $mobile-only) {
+      margin-right: 164px;
+      margin-left: 164px;
     }
+
+    @media screen and (min-width: $tablet) and (max-width: $tablet-only) {
+      margin-right: 165px;
+      margin-left: 76px;
+    }
+
     @media screen and (min-width: $desktop) {
       margin-right: 70px;
     }
@@ -26,18 +34,25 @@
     color: $text-on-a-dark-background;
     margin-bottom: 20px;
 
-    @media screen and (max-width: $tablet) {
+    @media screen and (max-width: $tablet-only) {
       text-align: center;
     }
     }
 
   &__join {
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 60px;
+
+    @media screen and (max-width: $mobile-only) {
+      margin-right: 137px;
+      margin-left: 137px;
+      margin-top: 60px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: $tablet-only)  {
+      margin-right: 89px;
+      margin-top: 5px;
+    }
 
     @media screen and (min-width: $desktop) {
-    padding-top: 72px;
+    padding-top: 12px;
     margin-right: 93px;
     }
   }
@@ -46,7 +61,9 @@
   .address {
     text-decoration: none;
     font-style: normal;
-    text-align: center;
+    @media screen and (max-width: $tablet-only) {
+      text-align: center;
+    }
   
   &__unit:not(:last-child) {
     margin-bottom: 9px;
@@ -72,21 +89,22 @@
 }
       
   .form {
-    @media screen and (max-width: $tablet) {
+    @media screen and (max-width: $tablet-only) {
       margin-top: 60px;
     }
 
-    @media screen and (min-width: $tablet) {
-      padding-top: 72px;
+    @media screen and (min-width: $desktop) {
+      padding-top: 12px;
     }
 
      
   &__subscription {
     display: flex;
 
-    @media screen and (max-width: $tablet) {
+    @media screen and (max-width: $tablet-only) {
       flex-wrap: wrap;
       justify-content: center;
+
     }
     
 
@@ -101,7 +119,7 @@
     height: 50px;
     padding: 15px 16px;
 
-    @media screen and (max-width: $tablet) {
+    @media screen and (max-width: $tablet-only) {
       width: 450px;
       margin: 0;
     }
@@ -131,9 +149,12 @@
     fill: $text-on-a-dark-background;
   }
   &__button {
-    @media screen and (max-width: $tablet) {
+    @media screen and (max-width: $tablet-only) {
+      margin-left: 140px;
+      margin-right: 140px;
       margin-top: 20px;
       text-align: center;
-      }
-  }
+    }
+
 }
+  }
