@@ -10,9 +10,13 @@
     background-image: linear-gradient(
       to right,
       $background-hero,
-      $background-hero),
-    url(../../imeges/main.jpg);
-   
+      $background-hero);
+      background-size: cover;
+
+      @media screen and (max-width: $mobile-only) {
+    background-image: url(../../imeges/mobile/hero/header.jpg);
+      }
+    
     
   &__title {
     margin-bottom: 30px;
@@ -25,3 +29,35 @@
     color: $text-on-a-dark-background;
     }
   }
+
+  @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: url(../../imeges/mobile/hero/header2x.jpg);
+    }
+    }
+      
+
+    @media screen and (min-width: $tablet) and (max-width: $tablet-only) {
+      .hero {
+        background-image: url(../../imeges/tablet/hero/header.jpg);
+      }
+      
+      @media screen  and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        .hero {
+          background-image: url(../../imeges/tablet/hero/header2x.jpg);
+        }
+        }
+      }
+
+
+      @media screen and (min-width: $desktop) {
+        .hero {
+          background-image: url(../../imeges/desktop/hero/main.jpg);
+        }
+        
+        @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+          .hero {
+            background-image: url(../../imeges/desktop/hero/main2x.jpg);
+          }
+          }
+        }

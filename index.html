@@ -224,7 +224,20 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="list tim__list">
             <li class="tim__unit">
-              <img src="./imeges/igor.jpg" alt="Игорь Демьяненко" width="270" height="260" />
+              <picture>
+                <source
+                srcset="..//..//imeges/mobile/tim/igor.jpg 1x, ..//..//imeges/mobile/tim/igor2x.jpg 2x" media="(max-width: 767px)"/>
+                
+                <source
+                srcset="..//..//imeges/desktop/tim/igor.jpg 1x, ..//..//imeges/desktop/tim/igor2x.jpg 2x" media="(min-width: 1199px)" />
+
+                <source
+                srcset="..//..//imeges/tablet/tim/igor.jpg 1x, ..//..//imeges/tablet/tim/igor2x.jpg 2x" media="(min-width: 768px)" />
+
+                <img src="/imeges/tablet/tim/igor2x.jpg" alt="Игорь Демьяненко" />
+
+              </picture>
+              
               <div class="tim__text">
                 <h3 class="tim__name">Игорь Демьяненко</h3>
                 <p class="tim__position" lang="en">Product Designer</p>
