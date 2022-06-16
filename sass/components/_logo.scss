@@ -21,11 +21,12 @@
       margin-bottom: 26px;
     }
   
+       
   &__footer {
       color: $color-logo-footer;
+      margin-bottom: 20px;
     @media screen and (max-width: $tablet-only) {
       margin-top: 0;
-      margin-bottom: 20px;
       text-align: center;
     }
 

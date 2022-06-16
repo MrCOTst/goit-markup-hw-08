@@ -43,19 +43,17 @@
   .menu-container .menu-toggle {
     position: absolute;
     top: 10px;
-    right: 16px;
+    right: 15px;
     color: #212121;
       
   }
 
-
-  
     .mobile-nav {    
       font-weight: 500;
       font-size: 40px;
       line-height: 1.175;
       letter-spacing: 0.02em;
-      margin-bottom: 302px;
+      margin-bottom: auto;
    
       &__link {
     display: block;
@@ -66,7 +64,14 @@
       &__link--current {
         color: $hover-color;
       }
+      &__contact {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+      }
     }
+
     .mobile-contact__tel {
       font-weight: 500;
       font-size: 34px;

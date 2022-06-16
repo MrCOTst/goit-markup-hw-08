@@ -2,7 +2,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
+ 
   z-index: 1;
   background-color: $background-section;
   border-bottom-width: 1px;
@@ -10,17 +11,26 @@
   border-bottom-style: solid;
   
   &__conteiner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
+  
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media screen and (min-width: $mobile) and (max-width: $mobile-only) {
+        width: 450px;
+      }
+   
+        
     }
   }
+  
+
 .page-header__conteiner .menu-toggle {
-  position: absolute;
-    top: 10px;
-    right: 16px;
+  margin-left: auto;
+  @media screen and (min-width: $mobile) {
     color: #212121;
+  }
+
+
 }
 
   .nav  {
@@ -30,8 +40,6 @@
     display: flex;
     margin: 0;
     padding: 0;
-
-
     margin-left: 93px;
     @media screen and (min-width: $tablet) and (max-width: $tablet-only) {
       margin-left: 88px;
@@ -87,19 +95,17 @@
   .header-contact {
     margin: 0;
     margin-left: auto;
+    display: flex;
     
     @media screen and (max-width: $mobile-only) {
       display: none;
     }
-    display: flex;
+    
     @media screen and (min-width: $tablet) and (max-width: $tablet-only) {
       flex-wrap: wrap;
       padding-top: 16px;
       padding-bottom: 16px;
-      
-    }
-    
-    
+      }
     
   &__link {
     display: flex;
@@ -124,22 +130,21 @@
       
     /* outline: 2px solid blue; */
   }
+  &__link:hover,
+  &__link:focus {
+    color: $hover-color;
+    
+  }
   
   &__icon {
     margin-right: 10px;
     fill: $secondary-text; 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-  }
-  
-  &__hover-zone:hover &__icon,
-  &__hover-zone:focus &__icon {
+   }
+      
+  &__link:hover &__icon,
+  &__link:focus &__icon {
      fill: $hover-color;
-  }
-  
-  &__link:hover,
-  &__link:focus {
-    color: $hover-color;
   }
   
   &__item:not(:last-child) {

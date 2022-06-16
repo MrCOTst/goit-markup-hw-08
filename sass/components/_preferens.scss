@@ -1,23 +1,65 @@
 .preferens {
      background-color: $background-section;
-  
+      
   &__list {
     display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: -15px;
-       
-  }
+    flex-wrap: wrap;
+    justify-content: center;
+   }
   
   &__unit {
     display: block;
     margin: 15px;
     @media screen and (min-width: $tablet) {
-      width: calc((100% - 4*15px) / 2);
+      width: calc((100% - 2*15px) / 2);
       }
     @media screen and (min-width: $desktop) {
-      width: calc((100% - 8*15px) / 4);
+      width: calc((100% - 6*15px) / 4);
        } 
+  }
+
+  @media screen and (max-width: $mobile-only) {
+    &__unit {
+      margin-right: 0;
+      margin-left: 0;
+    }
+    &__unit:first-child {
+      margin-top: 0;
+    }
+    &__unin:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $tablet-only) {
+    &__unit:nth-child(2n) {
+      margin-right: 0;
+    }
+    &__unit:nth-child(2n+1) {
+      margin-left: 0;
+     }
+    &__unit:nth-last-child(-n+2) {
+      margin-bottom: 0;
+    }
+    &__unit:nth-child(-n+2) {
+      margin-top: 0;
+    }
+
+  }
+
+  @media screen and (min-width: $desktop) {
+    &__unit:nth-child(4n) {
+      margin-right: 0;
+    }
+    &__unit:nth-child(4n+1) {
+      margin-left: 0;
+     }
+    &__unit:nth-last-child(-n+4) {
+      margin-bottom: 0;
+    }
+    &__unit:nth-child(-n+4) {
+      margin-top: 0;
+    }
   }
   
   &__text {
