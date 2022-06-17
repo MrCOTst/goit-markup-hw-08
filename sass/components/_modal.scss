@@ -32,7 +32,7 @@
     top: 50%;
     left: 50%;
 
-    @media screen and (max-width: $tablet-only) {
+    @media screen and (min-width: $mobile) and (max-width: $tablet-only) {
       width: 450px;
       height: 609px;
       border-radius: 4px;
@@ -99,7 +99,7 @@
   }
 
   &__button {
-    @media screen and (max-width: $tablet-only){
+    @media screen and (min-width: $mobile) and (max-width: $tablet-only){
       margin-left: 85px;
     }
     @media screen and (min-width: $desktop) {
@@ -186,8 +186,10 @@
   
   .agree {
     display: flex;
+    @media screen and (max-width: $mobile) {
+      flex-wrap: wrap;
+    }
     align-items: center;
-    
     margin-bottom: 30px;
 
     @media screen and (max-width: $tablet-only) {
@@ -205,7 +207,12 @@
     color: $secondary-text;
   
   &__text {
-    display: block;
+    display: inline-block;
+    @media screen and (min-width: $mobile) {
+      
+    }
+
+    
   }
   
   &__text--link {
