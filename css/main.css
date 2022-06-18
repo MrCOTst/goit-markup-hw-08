@@ -1200,7 +1200,7 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .customers__unit:nth-child(3n) {
     margin-right: 0;
   }
@@ -1685,13 +1685,27 @@ img {
 
 .work__text {
   display: block;
-  padding-top: 63px;
+  padding-top: 77px;
   padding-left: 24px;
   padding-right: 24px;
   margin: 0;
   font-size: 18px;
   line-height: 1.55;
   letter-spacing: 0.03;
+  overflow-y: scroll;
+  scrollbar-width: none;
   color: #ffffff;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .work__text {
+    padding-top: 49px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .work__text {
+    padding-top: 63px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

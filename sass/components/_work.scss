@@ -121,15 +121,24 @@
   
   &__text {
     display: block;
-    padding-top: 63px;
+    padding-top: 77px;
     padding-left: 24px;
     padding-right: 24px;
     margin: 0;
     font-size: 18px;
     line-height: 1.55;
     letter-spacing: 0.03;
+    overflow-y: scroll;
+    scrollbar-width: none;
     
     color: $text-on-a-dark-background;
+
+    @media screen and (min-width: $tablet) and (max-width: $tablet-only) {
+      padding-top: 49px;
+    }
+    @media screen and (min-width: $desktop){
+      padding-top: 63px;
+    }
   }
  
 }
