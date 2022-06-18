@@ -23,6 +23,19 @@
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);  
   }
 
+  @media screen and (max-width: $mobile-only) {
+    &__unit {
+      margin-right: 0;
+      margin-left: 0;
+    }
+    &__unit:first-child {
+      margin-top: 0;
+    }
+    &__unin:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   @media screen and (min-width: $tablet) and (max-width: $tablet-only) {
     &__unit:nth-child(2n) {
       margin-right: 0;

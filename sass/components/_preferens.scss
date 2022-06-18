@@ -19,6 +19,9 @@
   }
 
   @media screen and (max-width: $mobile-only) {
+    .preferens__subtitle {
+      text-align: center;
+    }
     &__unit {
       margin-right: 0;
       margin-left: 0;
